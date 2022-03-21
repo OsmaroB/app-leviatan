@@ -1,16 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react"
+import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Col, Row, Button, Card } from 'react-bootstrap';
 import { createClient } from 'pexels';
-// import { createClient } from 'pexels';
-// const client = createClient('563492ad6f917000010000016200d3e5129840fca6b3a85a401c83ff');
+const client = createClient('563492ad6f917000010000016200d3e5129840fca6b3a85a401c83ff');
 
-
-function App() {
-  return (
-    <div className="App" style={{backgroundColor: 'rgb(40, 44, 52)'}}>
-        <Container fluid>
+const IndexPage = () => (
+  <>
+    <Container style={{backgroundColor: 'rgb(40, 44, 52)'}} fluid>
           <Row>
             <Col sm={12} md={8} lg={8} className='mt-5 mb-5'>
               <Card>
@@ -36,8 +34,8 @@ function App() {
             </Col>
           </Row>
         </Container>
-    </div>
-  );
-}
+  </>
+)
 
-export default App;
+export default IndexPage
+
